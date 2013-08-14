@@ -1,0 +1,18 @@
+Acute Software Code Doc Data [alpha]
+
+written by Duncan Murray 14/8/2013 (C) Acute Software
+
+This is the python implementation of code_doc_data which allows you to
+automatically add documentation to a database (or CSV file) of your batch
+processes.
+
+
+Note, you need to first edit the cdd_config.py to chose how to keep logged information
+
+   --- USAGE DURING BATCH PROCESS ---
+   import code_doc_data as cdd
+   cdd.InitProject('TEST', 'Test project to see how it works', '')
+   cdd.CopyFile ('test.doc', 'test_backup.doc', 0)
+   cdd.DownloadFile ('http://www.....com/datapage.html', 'dataFile.csv' )
+   cdd.LoadData ('dataFile.csv', 'S_DATA_STAGING')
+
