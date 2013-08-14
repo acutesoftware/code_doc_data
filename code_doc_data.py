@@ -30,3 +30,6 @@ def CopyFile(src, dst, verify=1):
     # todo                                                  # verify if needed
     # dataStore.fileCopies.Add(fname, srcPath, destPath)    # log the file copy
     
+    
+def LoadData(csvFile, dataStore):
+    # load a csv file to a database
