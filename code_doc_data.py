@@ -23,13 +23,18 @@ def InitProject(proj_id, proj_name, srcFolder):
     # with updated metadata
     # DELETE FROM dataStore WHERE database.proj_id = proj_id
     # INSERT INTO dataStore.listOfProjects (proj_id, proj_name, srcFolder)
+    pass
 
 def CopyFile(src, dst, verify=1):
     # copies a file, and logs the details
     # shutil.copyfile(src, dst)                             # do the file copy
     # todo                                                  # verify if needed
     # dataStore.fileCopies.Add(fname, srcPath, destPath)    # log the file copy
-    
+    pass
     
 def LoadData(csvFile, dataStore):
     # load a csv file to a database
+    pass
+
+
+    
