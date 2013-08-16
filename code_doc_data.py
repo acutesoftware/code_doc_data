@@ -36,5 +36,9 @@ def LoadData(csvFile, dataStore):
     # load a csv file to a database
     pass
 
-
+def SaveData(logMethod, proj, title, comment):
+    if logMethod == 'FILE':
+        pass
+    elif logMethod == 'DATABASE':
+        pass
     
