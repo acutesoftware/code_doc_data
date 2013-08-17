@@ -41,4 +41,13 @@ def SaveData(logMethod, proj, title, comment):
         pass
     elif logMethod == 'DATABASE':
         pass
-    
+
+
+##########
+#  MAIN  #
+##########
+
+cdd_config.TestNamedTuple()
+
+
+        
