@@ -16,6 +16,7 @@
 import cdd_config
 import os, sys, csv
 
+
 def InitProject(proj_id, proj_name, srcFolder):
     # initialise the database / folder for a new project
     # this wipes existing data for 'proj_id' to allow the 
@@ -23,31 +24,39 @@ def InitProject(proj_id, proj_name, srcFolder):
     # with updated metadata
     # DELETE FROM dataStore WHERE database.proj_id = proj_id
     # INSERT INTO dataStore.listOfProjects (proj_id, proj_name, srcFolder)
-    pass
+    print('Initialising project - ', proj_id)
+    
 
-def CopyFile(src, dst, verify=1):
+def CopyFile(proj_id, src, dst, verify=1):
     # copies a file, and logs the details
     # shutil.copyfile(src, dst)                             # do the file copy
     # todo                                                  # verify if needed
     # dataStore.fileCopies.Add(fname, srcPath, destPath)    # log the file copy
     pass
     
-def LoadData(csvFile, dataStore):
+def LoadData(proj_id, csvFile, dataStore):
     # load a csv file to a database
     pass
 
-def SaveData(logMethod, proj, title, comment):
+def SaveData(proj_id, logMethod, proj, title, comment):
     if logMethod == 'FILE':
         pass
     elif logMethod == 'DATABASE':
         pass
 
+def SourceFile(proj_id, fileType, status, srcFileName, description):
+    print('Logging file -', fileType, 'status =', status, 'src=', srcFileName)
+     
 
 ##########
 #  MAIN  #
 ##########
 
 cdd_config.TestNamedTuple()
-
+pid = 'code_doc_data'
+pth = r'C:\user\dev\src\Python\code_doc_data'
+InitProject(pid, 'Code Doc Data', pth)
+SourceFile(pid, 'code', 'alpha', '\code_doc_data.py', 'Main code for cdd')
+SourceFile(pid, 'code', 'alpha', '\cdd_config.py', 'temp - setup of data structures')
 
         
