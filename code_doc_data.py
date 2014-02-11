@@ -13,7 +13,7 @@
 #
 #  --- REPORTING ---
 
-import cdd_config
+import cdd_config as cfg
 import os, sys, csv
 
 
@@ -25,7 +25,7 @@ def InitProject(proj_id, proj_name, srcFolder):
     # DELETE FROM dataStore WHERE database.proj_id = proj_id
     # INSERT INTO dataStore.listOfProjects (proj_id, proj_name, srcFolder)
     print('Initialising project - ', proj_id)
-    
+    print('Logs will be saved to ' + srcFolder)
 
 def CopyFile(proj_id, src, dst, verify=1):
     # copies a file, and logs the details
@@ -52,9 +52,9 @@ def SourceFile(proj_id, fileType, status, srcFileName, description):
 #  MAIN  #
 ##########
 
-cdd_config.TestNamedTuple()
+
 pid = 'code_doc_data'
-pth = r'C:\user\dev\src\Python\code_doc_data'
+pth = cfg.csv_folder # r'C:\user\dev\src\Python\code_doc_data'
 InitProject(pid, 'Code Doc Data', pth)
 SourceFile(pid, 'code', 'alpha', '\code_doc_data.py', 'Main code for cdd')
 SourceFile(pid, 'code', 'alpha', '\cdd_config.py', 'temp - setup of data structures')
